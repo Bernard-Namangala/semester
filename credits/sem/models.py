@@ -33,7 +33,7 @@ class Course(models.Model):
     Video = models.FileField(upload_to='videos')
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE)
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name="course")
 
     def __str__(self):
         return self.name

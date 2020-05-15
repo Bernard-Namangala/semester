@@ -22,6 +22,20 @@ def sub(request,pk):
     subjects = Semester.objects.get(id=pk).subjects.all()
     return render(request,'subject.html',{"subjects":subjects})
 
-def lecture(request):
-    course = Course.objects.all()
-    return render(request,'lecture.html')
+def lecture(request, pk):
+    course = Course.objects.get(id=pk)
+    return render(request,'lecture.html', {"course":course})
+
+
+def video(request, pk):
+    course = Course.objects.get(id=pk)
+    return render(request,'lecture_video.html', {"course":course})
+
+def course_pdf(request, pk):
+    course = Course.objects.get(id=pk)
+    return render(request,'course_pdf.html', {"course":course})
+
+
+def quest(request, pk):
+    course = Course.objects.get(id=pk)
+    return render(request,'quest_pdf.html', {"course":course})

@@ -11,7 +11,7 @@
     {% for subject in subjects %}
     <div class="base">
         <button><h3>
-            <a href="{% url 'sem:lecture' %}">{{subject.name}}</a> </h3></button>
+            <a href="{% url 'sem:lecture' subject.id %}">{{subject.name}}</a> </h3></button>
             <button>
       </div>
       {% endfor %}

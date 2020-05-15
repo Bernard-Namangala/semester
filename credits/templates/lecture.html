@@ -1,18 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{%  static 'css/lecture.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%  static 'css/lecture.css' %}" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="base">
-        <button><h3>video</h3></button>
-        <button><h3>pdf</h3></button>
-        <button><h3>imp qestion</h3></button>
-        
-      </div>
-</body>
+      <button>
+        <h3><a href="{% url 'sem:video' course.id %}">Video</a></h3>
+      </button>
+      <button><h3>pdf</h3></button>
+      <button><h3>imp qestion</h3></button>
+    </div>
+  </body>
 </html>
