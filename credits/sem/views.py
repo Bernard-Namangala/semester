@@ -33,7 +33,7 @@ def video(request, pk):
 
 def course_pdf(request, pk):
     course = Course.objects.get(id=pk)
-    return render(request,'course_pdf.html', {"course":course})
+    return render(request,'pdf.html', {"course":course})
 
 
 def quest(request, pk):
